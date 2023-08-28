@@ -1,0 +1,415 @@
+2023-04-25 14:55:14,167 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Claim Assurance\Query\views.py", line 297, in get
+    print(max(list_of_files, key=os.path.getmtime))
+ValueError: max() arg is an empty sequence
+2023-04-25 15:21:15,123 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Claim Assurance\Query\views.py", line 309, in get
+    util.send_email(data)
+  File "D:\Claim Assurance\Query\utils.py", line 14, in send_email
+    email.send()
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials x3-20020a628603000000b0063d666566d1sm8821234pfd.72 - gsmtp')
+2023-04-25 15:21:56,856 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Claim Assurance\Query\views.py", line 309, in get
+    util.send_email(data)
+  File "D:\Claim Assurance\Query\utils.py", line 14, in send_email
+    email.send()
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials d3-20020a62f803000000b00640debdf61fsm2381025pfh.5 - gsmtp')
+2023-04-25 15:22:10,438 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Claim Assurance\Query\views.py", line 309, in get
+    util.send_email(data)
+  File "D:\Claim Assurance\Query\utils.py", line 14, in send_email
+    email.send()
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials k5-20020a170902e90500b00199203a4fa3sm7928476pld.203 - gsmtp')
+2023-04-25 15:29:50,084 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1791, in get_mailbox
+    token, value = get_name_addr(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1767, in get_name_addr
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected name-addr but found '['jafar.khan@bhugolgis.com', 'jafarkhan9892@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1456, in get_local_part
+    token, value = get_dot_atom(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1365, in get_dot_atom
+    token, value = get_dot_atom_text(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1334, in get_dot_atom_text
+    raise errors.HeaderParseError("expected atom at a start of "
+email.errors.HeaderParseError: expected atom at a start of dot-atom-text but found '['jafar.khan@bhugolgis.com', 'jafarkhan9892@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1794, in get_mailbox
+    token, value = get_addr_spec(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1640, in get_addr_spec
+    token, value = get_local_part(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1459, in get_local_part
+    token, value = get_word(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1398, in get_word
+    raise errors.HeaderParseError("Expected 'atom' or 'quoted-string' "
+email.errors.HeaderParseError: Expected 'atom' or 'quoted-string' but found '['jafar.khan@bhugolgis.com', 'jafarkhan9892@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\message.py", line 86, in sanitize_address
+    token, rest = parser.get_mailbox(addr)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1796, in get_mailbox
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected mailbox but found '['jafar.khan@bhugolgis.com', 'jafarkhan9892@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Claim Assurance\Query\views.py", line 309, in get
+    util.send_email(data)
+  File "D:\Claim Assurance\Query\utils.py", line 14, in send_email
+    email.send()
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 131, in send_messages
+    sent = self._send(message)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 144, in _send
+    recipients = [
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 145, in <listcomp>
+    sanitize_address(addr, encoding) for addr in email_message.recipients()
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\message.py", line 88, in sanitize_address
+    raise ValueError('Invalid address "%s"' % addr)
+ValueError: Invalid address "['jafar.khan@bhugolgis.com', 'jafarkhan9892@gmail.com']"
+2023-04-25 15:34:55,821 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1791, in get_mailbox
+    token, value = get_name_addr(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1767, in get_name_addr
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected name-addr but found '['jafar.khan@bhugolgis.com', 'jafarkhan9892@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1456, in get_local_part
+    token, value = get_dot_atom(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1365, in get_dot_atom
+    token, value = get_dot_atom_text(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1334, in get_dot_atom_text
+    raise errors.HeaderParseError("expected atom at a start of "
+email.errors.HeaderParseError: expected atom at a start of dot-atom-text but found '['jafar.khan@bhugolgis.com', 'jafarkhan9892@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1794, in get_mailbox
+    token, value = get_addr_spec(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1640, in get_addr_spec
+    token, value = get_local_part(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1459, in get_local_part
+    token, value = get_word(value)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1398, in get_word
+    raise errors.HeaderParseError("Expected 'atom' or 'quoted-string' "
+email.errors.HeaderParseError: Expected 'atom' or 'quoted-string' but found '['jafar.khan@bhugolgis.com', 'jafarkhan9892@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\message.py", line 86, in sanitize_address
+    token, rest = parser.get_mailbox(addr)
+  File "C:\Users\jafar.khan\AppData\Local\Programs\Python\Python310\lib\email\_header_value_parser.py", line 1796, in get_mailbox
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected mailbox but found '['jafar.khan@bhugolgis.com', 'jafarkhan9892@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Claim Assurance\Query\views.py", line 311, in get
+    util.send_email(data)
+  File "D:\Claim Assurance\Query\utils.py", line 14, in send_email
+    email.send()
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 131, in send_messages
+    sent = self._send(message)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 144, in _send
+    recipients = [
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\backends\smtp.py", line 145, in <listcomp>
+    sanitize_address(addr, encoding) for addr in email_message.recipients()
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\mail\message.py", line 88, in sanitize_address
+    raise ValueError('Invalid address "%s"' % addr)
+ValueError: Invalid address "['jafar.khan@bhugolgis.com', 'jafarkhan9892@gmail.com']"
+2023-04-25 16:50:40,263 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: JSONFileView.get() takes 0 positional arguments but 2 were given
+2023-04-25 16:56:45,669 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-04-25 17:01:56,783 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-04-25 17:02:44,426 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-04-25 17:03:11,827 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-04-25 17:05:27,967 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-04-25 17:05:53,545 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-04-25 17:06:23,328 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2023-04-25 17:07:56,439 django.request ERROR    Internal Server Error: /api/Query/JSONFileView
+Traceback (most recent call last):
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\Claim Assurance\.env\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
